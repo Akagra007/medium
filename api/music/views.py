@@ -16,3 +16,11 @@ class ListSongsView(generics.ListAPIView):
     """
     queryset = Songs.objects.all()
     serializer_class = SongsSerializer
+
+
+class ListSongsDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Provides a get method handler.
+    """
+    queryset = Songs.objects.all()
+    serializer_class = SongsSerializer
